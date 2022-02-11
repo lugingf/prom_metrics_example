@@ -4,7 +4,7 @@ Simple example hot wo use prometheus/client_golang
 
 
 To launch
-`go build -o app webinar_metrics && ./app`
+`go build -o app prom_metrics_example && ./app`
 
 use for create requests (time sleep in milliseconds)
 
