@@ -1,6 +1,8 @@
 # Prometheus metrics
 
 Simple example hot wo use prometheus/client_golang
+
+
 To launch
 `go build -o app webinar_metrics && ./app`
 
