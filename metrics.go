@@ -45,17 +45,15 @@ func InitMetrics() {
 
 	if httpCount == nil {
 		httpCount = promauto.NewCounterVec(prometheus.CounterOpts{
-			Name:        "http_request_count",
-			Help:        "Count of HTTP requests.",
-			ConstLabels: nil,
+			Name: "http_request_count",
+			Help: "Count of HTTP requests.",
 		}, []string{labelApp, labelPath, labelCode, labelMethod})
 	}
 
 	if httpGauge == nil {
 		httpGauge = promauto.NewGaugeVec(prometheus.GaugeOpts{
-			Name:        "http_request_gauge",
-			Help:        "Gauge of HTTP requests.",
-			ConstLabels: nil,
+			Name: "http_request_gauge",
+			Help: "Gauge of HTTP requests.",
 		}, []string{labelApp, labelPath, labelCode, labelMethod})
 	}
 }

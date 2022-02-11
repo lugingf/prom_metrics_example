@@ -46,12 +46,11 @@ func PrometheusMiddleware(next http.Handler) http.Handler {
 		r.Body = ioutil.NopCloser(bytes.NewBuffer(request))
 
 		start := time.Now()
+
 		next.ServeHTTP(recorder, r)
 
 		SaveHTTPDurationHistogram(start, path, recorder.Status, r.Method)
-
 		SaveHTTPDuration(start, path, recorder.Status, r.Method)
-
 		SaveHTTPCount(1, path, recorder.Status, r.Method)
 
 		sleepData := r.URL.Query().Get("sleep")

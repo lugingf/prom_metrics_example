@@ -39,6 +39,7 @@ func runMetricServer() {
 	}
 
 	log.Printf(fmt.Sprintf("starting Metric exporter server: listening on %s", listenAddress))
+
 	err := srv.ListenAndServe()
 	if err != http.ErrServerClosed {
 		log.Fatal("failed to listen promhandler server")
