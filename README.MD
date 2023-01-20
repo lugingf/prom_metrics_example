@@ -1,6 +1,6 @@
 # Prometheus metrics
 
-Simple example hot wo use prometheus/client_golang
+Simple example how to use prometheus/client_golang
 
 
 To launch
